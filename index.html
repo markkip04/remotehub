@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteHub | Real Remote Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        
+        <!-- SEARCH BAR -->
+        <div class="header-search" style="position: relative;">
+            <input type="text" id="searchInput" placeholder="Search platforms..." autocomplete="off">
+            <button>🔍</button>
+            <div id="searchDropdown" class="search-dropdown"></div>
+        </div>
+
+        <div class="nav-links">
+            <a href="legal/about.html">About</a>
+            <a href="legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Opportunities</span>
+            <h1>Real Remote Work.</h1>
+            <p>Tested by a remote worker. Find AI training and freelancing platforms that actually pay.</p>
+        </div>
+    </section>
+
+    <!-- MAIN GRID -->
+    <section class="jobs-section">
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All Jobs</button>
+            <button class="filter-btn" data-category="ai-training">AI Training</button>
+            <button class="filter-btn" data-category="freelancing">Freelancing</button>
+            <button class="filter-btn" data-category="trading">Forex & Trading</button>
+        </div>
+
+        <div class="job-grid" id="jobGrid">
+            
+            <!-- Card 1: Loggy3 (Recommended) -->
+            <a href="pages/loggy3.html" class="job-card" data-category="ai-training">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80'); position: relative;">
+                    <span style="position: absolute; top: 10px; right: 10px; background: #f59e0b; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">⭐ Recommended</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Loggy3</h3><span class="tag">AI Training</span></div>
+                    <p class="pay">Earn <strong>$0.10 - $1.00</strong> / hr</p>
+                    <p class="desc">Get paid to let an app record your screen while you work. Open to Kenyans.</p>
+                    <div class="card-footer"><span style="display: inline-block; background: var(--primary); color: white; padding: 8px 15px; border-radius: 6px; font-size: 14px;">Easy to Start &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 2: Outlier -->
+            <a href="pages/outlier.html" class="job-card" data-category="ai-training">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Outlier AI Trainer</h3><span class="tag">AI Training</span></div>
+                    <p class="pay">Up to <strong>$50</strong> / hr</p>
+                    <p class="desc">Train AI models by writing and rating text. Remote & flexible.</p>
+                    <div class="card-footer"><span>Read Guide &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 3: DataAnnotation -->
+            <a href="pages/dataannotation.html" class="job-card" data-category="ai-training">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <div class="card-header"><h3>DataAnnotation Tech</h3><span class="tag">AI Training</span></div>
+                    <p class="pay">Up to <strong>$40</strong> / hr</p>
+                    <p class="desc">Evaluate AI chatbots and write code/text evaluations.</p>
+                    <div class="card-footer"><span>Read Guide &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 4: Fiverr -->
+            <a href="pages/fiverr.html" class="job-card" data-category="freelancing">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Fiverr Freelancer</h3><span class="tag">Freelancing</span></div>
+                    <p class="pay">Varies / <strong>$100+</strong> per gig</p>
+                    <p class="desc">Sell your skills (coding, design, writing) to global clients.</p>
+                    <div class="card-footer"><span>Read Guide &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 5: Upwork -->
+            <a href="pages/upwork.html" class="job-card" data-category="freelancing">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Upwork Professional</h3><span class="tag">Freelancing</span></div>
+                    <p class="pay">Up to <strong>$150+</strong> / hr</p>
+                    <p class="desc">Build long-term contracts with clients for tech and admin work.</p>
+                    <div class="card-footer"><span>Read Guide &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 6: Deriv -->
+            <a href="pages/deriv.html" class="job-card" data-category="trading">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80'); position: relative;">
+                    <span style="position: absolute; top: 10px; right: 10px; background: #ef4444; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">⚠️ High Risk</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Deriv Trading</h3><span class="tag" style="background: #fecaca; color: #7f1d1d;">Trading</span></div>
+                    <p class="pay">Varies (High Risk)</p>
+                    <p class="desc">Forex and synthetic indices. Learn the real risks before depositing any money.</p>
+                    <div class="card-footer"><span>Read Warning &rarr;</span></div>
+                </div>
+            </a>
+
+            <!-- Card 7: Forex Trading -->
+            <a href="pages/forex-trading.html" class="job-card" data-category="trading">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Forex Trading</h3><span class="tag" style="background: #fecaca; color: #7f1d1d;">Trading</span></div>
+                    <p class="pay">Learning required</p>
+                    <p class="desc">A list of 5 regulated brokers. Do not trade without economic knowledge.</p>
+                    <div class="card-footer"><span>View List &rarr;</span></div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 RemoteHub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="legal/privacy.html">Privacy Policy</a>
+            <a href="legal/terms.html">Terms of Service</a>
+            <a href="legal/disclaimer.html">Disclaimer</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

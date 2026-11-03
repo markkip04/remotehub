@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RemoteHub</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main class="legal-container">
+        <h1>About RemoteHub</h1>
+        
+        <p><strong>My name is Mark Kipyegon Rotich.</strong> I am an undergraduate student at the University of Nairobi studying BSc. Microprocessor Technology and Instrumentation.</p>
+        
+        <p>Like many university students, I faced the harsh reality of campus life and financial hardship. Desperate to find a way to sustain myself and cover my expenses, I fell victim to fake job scams that promised easy remote money but delivered nothing.</p>
+        
+        <p>However, I didn't give up. I pivoted, started working with Opera Bloggers to earn a living, and over the last 2 years, I have dedicated my time to deep researching the remote work industry. I have tested, applied to, and worked on most of the legitimate platforms listed on this website.</p>
+
+        <p><strong>Why I built this site:</strong> I created RemoteHub to protect others from the scams I fell for. This site is a collection of my real, tested research. I do not offer fake jobs, I do not ask for money, and I do not sell data. I simply show you the real platforms that pay, how much they actually pay, and exactly how to pass their strict application processes.</p>
+
+        <p>If you are a student, a job seeker, or anyone looking for honest remote work, you are in the right place.</p>
+    </main>
+    <footer>
+        <p>&copy; 2026 RemoteHub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+

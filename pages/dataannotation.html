@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataAnnotation Guide | RemoteHustle</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main class="article-container">
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h1>DataAnnotation Tech: High-Paying AI Training</h1>
+        <p class="article-meta">Published: November 2026 | Category: AI Training</p>
+        <p class="lead">DataAnnotation is one of the most selective AI training platforms, but it pays incredibly well if you get in.</p>
+        <h2>What is DataAnnotation?</h2>
+        <p>They hire people to evaluate AI chatbots, write coding problems, or fact-check AI responses. The work is completely asynchronous—you work whenever you want, as much as you want.</p>
+        <h2>⚠️ The Strict Application Process</h2>
+        <p>Unlike other sites, DataAnnotation actually reviews your starter assessment manually. If you use ChatGPT to write your answers, they will know, and you will be permanently banned. It can take weeks to hear back.</p>
+        <h2>DataAnnotation Earnings Calculator</h2>
+        <div class="calculator-box">
+            <label>Hours worked per week: <span id="d-hours-display">20</span></label>
+            <input type="range" id="d-hours" min="5" max="60" step="5" value="20">
+            <div class="calc-result">Estimated Monthly Pay (at $40/hr average):<br><strong id="d-result">$3,200</strong></div>
+        </div>
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h2>Why do people get rejected?</h2>
+        <p>1. <strong>Grammar mistakes:</strong> You must have flawless written English.<br>2. <strong>Not following instructions:</strong> If they ask for 2 paragraphs, don't write 3.<br>3. <strong>Using AI:</strong> As mentioned, this is an instant ban.</p>
+        <script>
+            const dHours = document.getElementById('d-hours');
+            function calcD() {
+                const hours = parseInt(dHours.value);
+                document.getElementById('d-hours-display').textContent = hours;
+                document.getElementById('d-result').textContent = '$' + ((hours * 4) * 40).toLocaleString();
+            }
+            dHours.addEventListener('input', calcD); calcD();
+        </script>    </main>
+    <footer>
+        <p>&copy; 2026 RemoteHustle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms of Service</a>
+            <a href="../legal/disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

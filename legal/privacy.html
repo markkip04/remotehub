@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | RemoteHustle</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main class="legal-container">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: November 2026</p>
+        <p>At RemoteHustle, accessible from our website, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by RemoteHustle and how we use it.</p>
+        <h2>Log Files</h2>
+        <p>RemoteHustle follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.</p>
+        <h2>Cookies and Web Beacons</h2>
+        <p>Like any other website, RemoteHustle uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+        <h2>Google DoubleClick DART Cookie</h2>
+        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>.</p>
+        <h2>Third Party Privacy Policies</h2>
+        <p>RemoteHustle's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.</p>    </main>
+    <footer>
+        <p>&copy; 2026 RemoteHustle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+
+

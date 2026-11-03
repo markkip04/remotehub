@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork Guide | RemoteHustle</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main class="article-container">
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h1>Upwork Professional: The Long-Term Freelance Game</h1>
+        <p class="article-meta">Published: November 2026 | Category: Freelancing</p>
+        <p class="lead">Upwork is where you go when you want high-paying, long-term contracts. But it requires a professional profile and a smart bidding strategy.</p>
+        <h2>How Upwork Works</h2>
+        <p>You apply for jobs by sending "Connects" (paid proposals). Clients review your profile, your portfolio, and your cover letter. If hired, you can work hourly (with tracking) or on fixed-price milestones.</p>
+        <h2>⚠️ The Connects System</h2>
+        <p>You only get a few free Connects per month. If you spam your proposal to 50 jobs, you will run out of Connects and get no replies. Only apply to jobs where you are a 100% perfect match.</p>
+        <h2>Upwork Earnings Calculator</h2>
+        <div class="calculator-box">
+            <label>Your Hourly Rate: $<span id="u-rate-display">30</span>/hr</label>
+            <input type="range" id="u-rate" min="5" max="150" step="5" value="30">
+            <label>Billable Hours per month: <span id="u-hours-display">80</span></label>
+            <input type="range" id="u-hours" min="10" max="200" step="10" value="80">
+            <div class="calc-result">Estimated Monthly Pay (after 10% fee):<br><strong id="u-result">$2,160</strong></div>
+        </div>
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h2>How to Win Your First Contract</h2>
+        <p>1. <strong>Write a custom cover letter:</strong> Never use a template. Mention their specific project name.<br>2. <strong>Do a small test:</strong> Offer to do the first milestone at a slight discount to prove your quality.<br>3. <strong>Over-deliver:</strong> The first review is everything.</p>
+        <script>
+            const uRate = document.getElementById('u-rate'); const uHours = document.getElementById('u-hours');
+            function calcU() {
+                const rate = parseInt(uRate.value); const hours = parseInt(uHours.value);
+                document.getElementById('u-rate-display').textContent = rate;
+                document.getElementById('u-hours-display').textContent = hours;
+                document.getElementById('u-result').textContent = '$' + ((rate * 0.9) * hours).toLocaleString();
+            }
+            uRate.addEventListener('input', calcU); uHours.addEventListener('input', calcU); calcU();
+        </script>    </main>
+    <footer>
+        <p>&copy; 2026 RemoteHustle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms of Service</a>
+            <a href="../legal/disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

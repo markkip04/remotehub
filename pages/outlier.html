@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlier AI Guide: Real Pay & How to Pass | RemoteHustle</title>
+    <!-- Notice the ../ because we are inside the pages folder -->
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- TOP NAVIGATION -->
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- ARTICLE CONTENT -->
+    <main class="article-container">
+        
+        <!-- ADSENSE SLOT (Top of article) -->
+        <div class="ad-slot">
+            <p>Advertisement</p>
+        </div>
+
+        <h1>Outlier AI Review: How to Get Paid to Train AI</h1>
+        <p class="article-meta">Published: November 2026 | Category: AI Training</p>
+
+        <p class="lead">Outlier is one of the highest-paying AI training platforms right now. But getting accepted and staying on the platform requires strategy. Here is the honest breakdown of how it works and how much you can actually make.</p>
+
+        <h2>What is Outlier?</h2>
+        <p>Outlier connects subject matter experts with AI companies. You will typically be asked to read AI-generated text, write your own responses, and rate the AI on how accurate or helpful it is. It is completely remote and you set your own hours.</p>
+
+        <h2>âš ï¸ The VPN Rule (Important)</h2>
+        <p>If you are in a restricted region, <strong>do not use a VPN or Proxy</strong>. Outlier strictly monitors IP addresses. If they detect a VPN, you will be banned and you will lose your earnings. You must use the standard internet provider from your registered country.</p>
+
+        <h2>Outlier Earnings Calculator</h2>
+        <p>Outlier pays per task, but it averages out to an hourly rate. Adjust the sliders below to estimate your monthly pay.</p>
+        
+        <!-- INTERACTIVE CALCULATOR -->
+        <div class="calculator-box">
+            <label>Hours per day: <span id="hours-display">4</span> hrs</label>
+            <input type="range" id="hours-slider" min="1" max="12" value="4">
+            
+            <label>Days per week: <span id="days-display">5</span> days</label>
+            <input type="range" id="days-slider" min="1" max="7" value="5">
+            
+            <div class="calc-result">
+                Estimated Monthly Pay: <strong id="monthly-pay">$800 - $1,600</strong>
+            </div>
+        </div>
+
+        <!-- ADSENSE SLOT (Middle of article) -->
+        <div class="ad-slot">
+            <p>Advertisement</p>
+        </div>
+
+        <h2>How to Pass the Initial Assessment</h2>
+        <p>Before you get work, you must take a test. 
+            <br>1. <strong>Read the instructions carefully:</strong> They often ask you to format your response in a very specific way.
+            <br>2. <strong>Do not use AI to write your answer:</strong> They use detection tools. If you use ChatGPT, you will be instantly rejected.
+            <br>3. <strong>Take your time:</strong> The test is not timed. Quality beats speed.
+        </p>
+
+        <!-- FAQ ACCORDION -->
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question">How do I get paid on Outlier? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>You can get paid via PayPal, Airtm, or direct bank transfer depending on your country. Payouts usually happen weekly.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Is Outlier a scam? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>No, Outlier is a legitimate company backed by Scale AI. However, the workload can be inconsistent. Some weeks you may have many tasks, other weeks you might have none.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do I need a degree to work here? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>While some specific projects require degrees (like coding or medical projects), many general language projects only require strong reading and writing skills.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 RemoteHustle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms of Service</a>
+            <a href="../legal/disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+
+    <!-- Notice the ../ for script.js -->
+    
+    
+    <!-- SPECIAL SCRIPT JUST FOR THIS PAGE (Calculator) -->
+    <script>
+        const hoursSlider = document.getElementById('hours-slider');
+        const daysSlider = document.getElementById('days-slider');
+        const hoursDisplay = document.getElementById('hours-display');
+        const daysDisplay = document.getElementById('days-display');
+        const monthlyPay = document.getElementById('monthly-pay');
+
+        function calculatePay() {
+            const hours = parseInt(hoursSlider.value);
+            const days = parseInt(daysSlider.value);
+            
+            hoursDisplay.textContent = hours;
+            daysDisplay.textContent = days;
+
+            // Let's assume an average of $15 to $30 per hour for AI training
+            const weeklyHours = hours * days;
+            const monthlyHours = weeklyHours * 4;
+            
+            const lowEstimate = monthlyHours * 15;
+            const highEstimate = monthlyHours * 30;
+
+            monthlyPay.textContent = `$${lowEstimate.toLocaleString()} - $${highEstimate.toLocaleString()}`;
+        }
+
+        hoursSlider.addEventListener('input', calculatePay);
+        daysSlider.addEventListener('input', calculatePay);
+        calculatePay(); // Run once on page load
+    </script>
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+
+

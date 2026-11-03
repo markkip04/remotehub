@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiverr Guide | RemoteHustle</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('dark-mode');
+                const btn = document.getElementById('theme-toggle');
+                if(btn) btn.textContent = '☀️ Light Mode';
+            });
+        }
+    </script>
+</head>
+<body>
+            <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
+            <a href="../index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px;">R</div>
+                <span style="font-weight: 800; color: var(--text-main);">Remote<span style="color: var(--primary);">Hub</span></span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../legal/about.html">About</a>
+            <a href="../legal/contact.html">Contact</a>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main class="article-container">
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h1>Fiverr Guide: How to Actually Make Money</h1>
+        <p class="article-meta">Published: November 2026 | Category: Freelancing</p>
+        <p class="lead">Fiverr is the easiest place to start freelancing, but the competition is fierce. Here is how to stand out, rank your gig, and get your first client.</p>
+        <h2>How Fiverr Works</h2>
+        <p>Unlike traditional job boards, on Fiverr, you create "Gigs" (services you offer) and buyers come to you. You can sell anything from logo design to voiceovers, coding, or virtual assistance.</p>
+        <h2>⚠️ The 20% Fee Rule</h2>
+        <p>Fiverr takes a 20% cut of every job you complete. If you charge $100, you keep $80. Keep this in mind when pricing your services. Also, never take communication off the platform early, or you will get banned.</p>
+        <h2>Fiverr Earnings Calculator</h2>
+        <div class="calculator-box">
+            <label>Price per gig: $<span id="f-gig-display">50</span></label>
+            <input type="range" id="f-gig" min="5" max="500" step="5" value="50">
+            <label>Gigs completed per month: <span id="f-qty-display">10</span></label>
+            <input type="range" id="f-qty" min="1" max="50" value="10">
+            <div class="calc-result">Estimated Monthly Pay (after 20% fee):<br><strong id="f-result">$400</strong></div>
+        </div>
+        <div class="ad-slot"><p>Advertisement</p></div>
+        <h2>How to Rank on Page 1</h2>
+        <p>1. <strong>Use a video:</strong> Gigs with videos get 40% more clicks.<br>2. <strong>Niche down:</strong> Don't just say "I do graphic design." Say "I design minimalist real estate logos."<br>3. <strong>Fast response time:</strong> The algorithm rewards sellers who reply within 1 hour.</p>
+        <script>
+            const fGig = document.getElementById('f-gig'); const fQty = document.getElementById('f-qty');
+            function calcF() {
+                const price = parseInt(fGig.value); const qty = parseInt(fQty.value);
+                document.getElementById('f-gig-display').textContent = price;
+                document.getElementById('f-qty-display').textContent = qty;
+                document.getElementById('f-result').textContent = '$' + ((price * 0.8) * qty).toLocaleString();
+            }
+            fGig.addEventListener('input', calcF); fQty.addEventListener('input', calcF); calcF();
+        </script>    </main>
+    <footer>
+        <p>&copy; 2026 RemoteHustle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms of Service</a>
+            <a href="../legal/disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQs</a>
+        </div>
+    </footer>
+    
+        <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div style="margin-top: 50px;">
+            <a href="../index.html" class="sidebar-link">Home</a>
+            <a href="../legal/about.html" class="sidebar-link">About Mark</a>
+            <a href="../legal/contact.html" class="sidebar-link">Contact</a>
+            <a href="../legal/privacy.html" class="sidebar-link">Privacy Policy</a>
+            <a href="../legal/terms.html" class="sidebar-link">Terms of Service</a>
+            <a href="../legal/disclaimer.html" class="sidebar-link">Disclaimer</a>
+            <a href="../faq.html" class="sidebar-link">FAQs</a>
+        </div>
+    </div>
+    
+    <script src="${prefix}script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

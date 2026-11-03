@@ -1,0 +1,608 @@
+﻿/* --- GLOBAL VARIABLES (Colors & Fonts) --- */
+:root {
+    --bg-color: #f8f9fa;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --card-bg: #ffffff;
+    --primary: #15803d; /* Premium Green */
+    --primary-hover: #166534;
+    --border: #e5e7eb;
+}
+
+/* Dark Mode Variables */
+body.dark-mode, html.dark-mode {
+    --bg-color: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --card-bg: #1e293b;
+    --border: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- NAVIGATION --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+.logo span { color: var(--primary); }
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+
+.search-container button {
+    padding: 15px 30px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- FILTERS & GRID --- */
+.jobs-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* --- JOB CARDS --- */
+.job-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tag {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pay {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.pay strong {
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 80px;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    .search-container { flex-direction: column; }
+    .job-grid { grid-template-columns: 1fr; }
+}
+/* --- ARTICLE & BLOG PAGES --- */
+.article-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.article-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.article-meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+
+.article-container h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.article-container p {
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.lead {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* Ad Slots */
+.ad-slot {
+    background-color: var(--border);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    border: 1px dashed #999;
+}
+
+/* --- CALCULATOR BOX --- */
+.calculator-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.calculator-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.calculator-box input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.calc-result {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 20px;
+    text-align: center;
+}
+
+.calc-result strong {
+    color: var(--primary);
+    font-size: 28px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- FAQ ACCORDION --- */
+.faq-title {
+    margin-top: 50px;
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none; /* Hidden by default */
+    padding-bottom: 20px;
+    color: var(--text-muted);
+}
+
+/* When active */
+.faq-item.active .faq-answer {
+    display: block;
+}
+.faq-item.active .plus {
+    transform: rotate(45deg);
+}
+.plus {
+    transition: transform 0.3s ease;
+    font-size: 24px;
+    color: var(--primary);
+}
+
+/* --- LEGAL & INFO PAGES --- */
+.legal-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.legal-container h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+.legal-container h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.legal-container p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+/* --- UPGRADED HERO SECTION --- */
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-color) 100%);
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-badge {
+    background: var(--primary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- UPGRADED JOB CARDS (WITH IMAGES) --- */
+.job-card {
+    padding: 0; /* Remove padding to let image touch edges */
+    overflow: hidden;
+}
+.card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+.job-card:hover .card-image {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* --- SLIDING SIDEBAR --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+.sidebar.open {
+    left: 0; /* Slide in */
+}
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-main);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.sidebar-link {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+}
+.sidebar-link:hover {
+    color: var(--primary);
+}
+
+/* --- HEADER SEARCH BAR --- */
+.header-search {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 5px 5px 5px 15px;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+.header-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 14px;
+}
+.header-search button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide search text on mobile, show only icon */
+@media (max-width: 768px) {
+    .header-search { 
+        max-width: 40px; 
+        padding: 5px; 
+        margin: 0 10px;
+    }
+    .header-search input { display: none; }
+}
+
+.card-image { position: relative; overflow: hidden; }
+
+/* --- LIVE SEARCH DROPDOWN --- */
+.search-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 999;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.search-dropdown.active {
+    display: flex;
+}
+.search-dropdown-item {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text-main);
+    transition: background 0.2s;
+}
+.search-dropdown-item:hover {
+    background: var(--bg-color);
+}
+.search-dropdown-item h4 {
+    margin: 0;
+    font-size: 15px;
+}
+.search-dropdown-item span {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* --- HERO WATERMARK --- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-color) 100%);
+}
+
+/* The Watermark Pattern Layer */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Using SVG data URI for tech icons (laptop, wifi, chart, code) */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2315803d' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Make sure the text stays above the watermark */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
