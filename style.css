@@ -682,3 +682,32 @@ header {
         font-size: 20px;
     }
 }
+
+/* --- FORCE HEADER ON ONE LINE MOBILE --- */
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* Stops anything from dropping down */
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    
+    /* Shrink the theme button text significantly on mobile */
+    #theme-toggle {
+        font-size: 11px !important; /* Smaller font */
+        padding: 5px 8px !important;
+        white-space: nowrap !important; /* Forces one line */
+        margin: 0 !important;
+    }
+    
+    /* Make sure the logo doesn't take up too much space */
+    .logo span {
+        font-size: 18px !important;
+    }
+    
+    /* Adjust gap to save space */
+    .nav-links {
+        gap: 5px !important;
+    }
+}
