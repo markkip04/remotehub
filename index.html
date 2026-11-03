@@ -20,7 +20,7 @@
 <body>
 
     <!-- HEADER -->
-    <header>
+        <header>
         <div style="display: flex; align-items: center; gap: 15px;">
             <button id="menu-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-main);">☰</button>
             <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
@@ -29,8 +29,12 @@
             </a>
         </div>
         
-        <!-- SEARCH BAR -->
-        
+        <!-- SEARCH BAR RESTORED -->
+        <div class="header-search" style="position: relative;">
+            <input type="text" id="searchInput" placeholder="Search platforms..." autocomplete="off">
+            <button>🔍</button>
+            <div id="searchDropdown" class="search-dropdown"></div>
+        </div>
 
         <div class="nav-links">
             <a href="legal/about.html">About</a>
@@ -172,4 +176,5 @@
     <script src="script.js" defer></script>
 </body>
 </html>
+
 

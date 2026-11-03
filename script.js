@@ -39,6 +39,55 @@
             sidebar.classList.remove('open');
         });
     }
+    // --- LIVE SEARCH DROPDOWN ---
+    const searchInput = document.getElementById('searchInput');
+    const searchDropdown = document.getElementById('searchDropdown');
+
+    const allPagesList = [
+        { title: "Outlier AI Trainer", category: "AI Training", link: "pages/outlier.html" },
+        { title: "Loggy3", category: "AI Training", link: "pages/loggy3.html" },
+        { title: "DataAnnotation Tech", category: "AI Training", link: "pages/dataannotation.html" },
+        { title: "Fiverr Freelancer", category: "Freelancing", link: "pages/fiverr.html" },
+        { title: "Upwork Professional", category: "Freelancing", link: "pages/upwork.html" },
+        { title: "Deriv Trading", category: "Trading", link: "pages/deriv.html" },
+        { title: "Forex Trading", category: "Trading", link: "pages/forex-trading.html" }
+    ];
+
+    if (searchInput && searchDropdown) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            searchDropdown.innerHTML = ''; 
+
+            if (term.length === 0) {
+                searchDropdown.classList.remove('active');
+                return;
+            }
+
+            const filteredPages = allPagesList.filter(page => 
+                page.title.toLowerCase().includes(term)
+            );
+
+            if (filteredPages.length > 0) {
+                filteredPages.forEach(page => {
+                    const item = document.createElement('a');
+                    item.href = page.link;
+                    item.className = 'search-dropdown-item';
+                    item.innerHTML = `<h4>${page.title}</h4> <span>${page.category}</span>`;
+                    searchDropdown.appendChild(item);
+                });
+                searchDropdown.classList.add('active');
+            } else {
+                searchDropdown.innerHTML = '<div style="padding: 15px; color: var(--text-muted);">No results found</div>';
+                searchDropdown.classList.add('active');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+                searchDropdown.classList.remove('active');
+            }
+        });
+    }
 
     // --- CATEGORY FILTERING (Homepage Only) ---
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -73,3 +122,4 @@
     }
 
 });
+

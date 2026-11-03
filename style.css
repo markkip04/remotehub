@@ -598,3 +598,39 @@ footer {
     z-index: 1;
 }
 
+
+/* --- STRICT MOBILE FIT --- */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+}
+
+/* --- RESPONSIVE HEADER & SEARCH FOR MOBILE --- */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to drop to the next line */
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    /* Make the search bar take the full width on mobile */
+    .header-search {
+        order: 3; /* Pushes it to the bottom of the header */
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    /* Adjust hero text so it doesn't overflow */
+    .hero h1 {
+        font-size: 36px !important;
+    }
+    .hero p {
+        font-size: 16px !important;
+    }
+    
+    /* Make sure job cards don't overflow */
+    .job-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
