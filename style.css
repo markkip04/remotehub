@@ -634,3 +634,33 @@ html, body {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* --- FIXED MOBILE HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    /* Hide the About/Contact text on mobile to save space */
+    .nav-text {
+        display: none !important;
+    }
+    
+    .hero {
+        padding: 30px 20px 20px 20px; /* Less white space at the top */
+    }
+}
