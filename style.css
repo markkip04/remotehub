@@ -664,3 +664,21 @@ header {
         padding: 30px 20px 20px 20px; /* Less white space at the top */
     }
 }
+
+/* --- FIX THEME BUTTON ON MOBILE --- */
+#theme-toggle {
+    white-space: nowrap; /* Prevents the text from dropping to the next line */
+}
+
+@media (max-width: 600px) {
+    /* Shrink the Dark Mode button text so it fits nicely */
+    #theme-toggle {
+        font-size: 13px !important;
+        padding: 6px 10px !important;
+    }
+    
+    /* Optional: Slightly shrink the logo text to give more room */
+    .logo span {
+        font-size: 20px;
+    }
+}
